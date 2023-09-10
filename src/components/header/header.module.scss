@@ -1,0 +1,16 @@
+@import '../../constants/constants.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include text-font(3.2rem, 700, $logo-color);
+  margin-left: 5px;
+}
+
+.user {
+  @include text-font(1.6rem, 400, $secondary-color);
+}

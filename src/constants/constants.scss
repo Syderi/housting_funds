@@ -1,0 +1,27 @@
+// colors
+
+$main-color: #000000;
+$secondary-color: #333;
+$logo-color: #e31f24;
+$gray-color: #76787d;
+
+$main-background: #fdfdfd;
+$box-shadow: rgba(0, 0, 0, 0.1);
+
+$input-border: #E9ECEF;
+
+// mixins.scss
+
+@mixin text-font(
+  $font-size: 1.4rem,
+  $font-weight: 400,
+  $color: $main-color,
+  $line-height: normal,
+  $font-style: normal
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  line-height: $line-height;
+  font-style: $font-style;
+}
