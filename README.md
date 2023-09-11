@@ -11,7 +11,7 @@
   После успешно выполненного запроса, необходимо отобразить полученного пользователя или пользователей в интерфейсе.
 ### Макет
 
-[Макет в Figma](https://www.figma.com/file/xEn4NVa7jVNgJC65Zx509X/Тестовое-задание-JF
+[Макет в Figma](https://www.figma.com/file/xEn4NVa7jVNgJC65Zx509X/Тестовое-задание-JF)
 
 ### Шрифт
 В проекте используется шрифт Montserrat [Шрифт](https://fonts.google.com/specimen/Montserrat)
