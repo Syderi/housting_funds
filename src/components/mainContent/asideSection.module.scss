@@ -22,8 +22,18 @@
     border-radius: 8px;
     border: 1.5px solid $input-border;
     background-color: $white-color;
-
     @include text-font(1.4rem, 400, $gray-color);
   }
 
+  .usersWrapper {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+  }
 }

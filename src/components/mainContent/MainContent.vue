@@ -1,5 +1,11 @@
-<script setup>
+<script>
 import AsideSection from './AsideSection.vue';
+
+export default {
+  components: {
+    AsideSection,
+  },
+};
 </script>
 
 <template>
