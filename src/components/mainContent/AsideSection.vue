@@ -33,6 +33,9 @@ export default {
         );
       });
     },
+    errorMessage() {
+      return this.$store.state.errorMessage;
+    },
   },
 
   created() {
@@ -55,6 +58,9 @@ export default {
       <Preloader />
       <br />
       <p>Загрузка данных пользователей...</p>
+    </div>
+    <div v-if="errorMessage && !users" :class="$style.errorMessage">
+      Произошла ошибка: {{ errorMessage }}
     </div>
     <ul :class="$style.usersWrapper">
       <li v-for="user in filteredUsers" :key="user.id">

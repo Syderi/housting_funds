@@ -12,6 +12,9 @@ export default {
     isLoading() {
       return this.$store.state.isLoadingUser;
     },
+    errorMessage() {
+      return this.$store.state.errorMessage;
+    },
   },
 };
 </script>
@@ -22,6 +25,9 @@ export default {
       <Preloader />
       <br />
       <p>Загрузка данных пользователя...</p>
+    </div>
+    <div v-else-if="errorMessage" :class="$style.errorMessage">
+      Произошла ошибка: {{ errorMessage }}
     </div>
     <div v-else-if="user" :class="$style.descriptionContainer">
       <img src="../../../assets/image/full_user.png" alt="big image" />
@@ -45,7 +51,9 @@ export default {
         </p>
       </div>
     </div>
-    <div v-else>Выберите сотрудника, чтобы посмотреть его профиль</div>
+    <div :class="$style.choose" v-else>
+      Выберите сотрудника, чтобы посмотреть его профиль
+    </div>
   </div>
 </template>
 

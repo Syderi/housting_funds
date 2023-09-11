@@ -5,7 +5,6 @@
   display: flex;
   width: 240px;
   height: 70px;
-  margin-top: 18px;
   border-radius: 10px;
   background: $white-color;
   box-shadow: 0px 0px 10px 0px $box-shadow;
@@ -16,7 +15,6 @@
   img {
     background-color: $white-color;
   }
-
 
   .description {
     display: flex;

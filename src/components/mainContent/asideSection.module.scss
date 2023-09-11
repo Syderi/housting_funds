@@ -24,6 +24,11 @@
     @include text-font(1.4rem, 400, $gray-color);
   }
 
+  .errorMessage {
+    margin-top: 20px;
+    @include text-font(1.6rem, 600, $logo-color);
+  }
+
   .preloader {
     margin-top: 30px;
   }
@@ -31,6 +36,7 @@
   .usersWrapper {
     max-height: 400px;
     width: 100%;
+    margin-top: 18px;
     overflow-y: auto;
     overflow-wrap: break-word;
     scrollbar-width: none;
@@ -38,6 +44,14 @@
     &::-webkit-scrollbar {
       width: 0px;
       height: 0px;
+    }
+
+    li {
+      margin-top: 18px;
+    }
+
+    li:first-child {
+      margin-top: 0px;
     }
   }
 }
