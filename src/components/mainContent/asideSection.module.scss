@@ -25,6 +25,10 @@
     @include text-font(1.4rem, 400, $gray-color);
   }
 
+  .preloader {
+    margin-top: 30px;
+  }
+
   .usersWrapper {
     max-height: 400px;
     width: 100%;

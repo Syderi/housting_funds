@@ -2,6 +2,8 @@
 
 .wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 975px;
   height: 575px;
   background: $white-color;

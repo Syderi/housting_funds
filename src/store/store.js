@@ -5,6 +5,7 @@ const store = createStore({
     user: null,
     users: null,
     isLoadingUser: false,
+    isLoadingUsers: false,
   },
   mutations: {
     SET_USER(state, user) {
@@ -15,6 +16,9 @@ const store = createStore({
     },
     SET_LOADING_USER(state, isLoading) {
       state.isLoadingUser = isLoading;
+    },
+    SET_LOADING_USERS(state, isLoading) {
+      state.isLoadingUsers = isLoading;
     },
   },
   actions: {
@@ -34,6 +38,7 @@ const store = createStore({
     },
     async fetchUsers({ commit }) {
       try {
+        commit('SET_LOADING_USERS', true);
         const response = await fetch(
           'https://jsonplaceholder.typicode.com/users'
         );
@@ -41,6 +46,8 @@ const store = createStore({
         commit('SET_USERS', data);
       } catch (error) {
         console.error('Ошибка при запросе пользователей:', error);
+      } finally {
+        commit('SET_LOADING_USERS', false);
       }
     },
   },

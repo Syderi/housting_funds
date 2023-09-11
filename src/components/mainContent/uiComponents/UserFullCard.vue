@@ -1,5 +1,10 @@
 <script>
+import Preloader from '../../../ui_global/Preloader.vue';
+
 export default {
+  components: {
+    Preloader,
+  },
   computed: {
     user() {
       return this.$store.state.user;
@@ -13,7 +18,11 @@ export default {
 
 <template>
   <div :class="$style.wrapper">
-    <p v-if="isLoading">Загрузка данных пользователя...</p>
+    <div v-if="isLoading">
+      <Preloader />
+      <br />
+      <p>Загрузка данных пользователя...</p>
+    </div>
     <div v-else-if="user" :class="$style.description">
       <h4 :class="$style.name">{{ user.name }}</h4>
       <p :class="$style.email">{{ user.email }}</p>
