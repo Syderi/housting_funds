@@ -61,6 +61,13 @@ export default {
         <UserPrevueCard :name="user.name" :email="user.email" :id="user.id" />
       </li>
     </ul>
+    <div
+      :class="$style.notUsers"
+      v-if="filteredUsers.length === 0 && !isLoadingUsers"
+      class="not-found"
+    >
+      Ничего не найдено
+    </div>
   </aside>
 </template>
 

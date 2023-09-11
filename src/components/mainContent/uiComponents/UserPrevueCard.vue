@@ -5,6 +5,12 @@ export default {
     name: String,
     email: String,
   },
+  computed: {
+    isActiveUser() {
+      const selectedUserId = this.$store.state.selectedUserId;
+      return this.id === selectedUserId;
+    },
+  },
   methods: {
     shortenText(text) {
       if (text.length > 12) {
@@ -14,7 +20,7 @@ export default {
       }
     },
     selectUser(userId) {
-      // Вызываем действие fetchUserById для загрузки пользователя по ID
+      this.$store.dispatch('setSelectedUserId', userId);
       this.$store.dispatch('fetchUserById', userId);
     },
   },
@@ -22,7 +28,11 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.wrapper" @click="selectUser(id)">
+  <div
+
+    :class="[!isActiveUser ? $style.wrapper : $style.wrapperActive]"
+    @click="selectUser(id)"
+  >
     <img src="../../../assets/image/prevue_user.png" alt="prevue avatar" />
     <div :class="$style.description">
       <h4 :class="$style.name">{{ shortenText(name) }}</h4>

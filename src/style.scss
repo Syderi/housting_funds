@@ -27,7 +27,6 @@ li {
 
 html {
   @include text-font(10px, 400, $main-color);
-  background-color: rgb(216, 245, 138);
 }
 
 body {
@@ -37,5 +36,4 @@ body {
   width: 100%;
   min-height: 748px;
   height: 100vh;
-  background-color: aquamarine;
 }

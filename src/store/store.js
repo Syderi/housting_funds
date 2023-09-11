@@ -4,6 +4,7 @@ const store = createStore({
   state: {
     user: null,
     users: null,
+    selectedUserId: null,
     isLoadingUser: false,
     isLoadingUsers: false,
   },
@@ -13,6 +14,9 @@ const store = createStore({
     },
     SET_USERS(state, users) {
       state.users = users;
+    },
+    SET_SELECTED_USER_ID(state, userId) {
+      state.selectedUserId = userId;
     },
     SET_LOADING_USER(state, isLoading) {
       state.isLoadingUser = isLoading;
@@ -49,6 +53,9 @@ const store = createStore({
       } finally {
         commit('SET_LOADING_USERS', false);
       }
+    },
+    setSelectedUserId({ commit }, userId) {
+      commit('SET_SELECTED_USER_ID', userId);
     },
   },
 });
