@@ -1,7 +1,34 @@
-# Vue 3 + Vite
+#Тестовое задание Frontend разработчик
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+  Необходимо реализовать страницу поиска сотрудников, с предпросмотром профиля.
+Приложение состоит из двух страниц, в sidebar осуществляется поиск и отображение результатов, можно искать одного сотрудника или нескольких.
+  На главной отображается карточка пользователя с личными данными.
+Готовый проект выложите на github.
 
-## Recommended IDE Setup
+###Sidebar
+  В строке поиска пользователя необходимо реализовать запрос к API для получения необходимых юзеров.
+  В случае если результат вернул ошибку (параметры запроса неверные, либо ошибка сервера), необходимо отобразить эту ошибку пользователю.
+  После успешно выполненного запроса, необходимо отобразить полученного пользователя или пользователей в интерфейсе.
+###Макет
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[https://www.figma.com/file/xEn4NVa7jVNgJC65Zx509X/Тестовое-задание-JF](https://www.figma.com/file/xEn4NVa7jVNgJC65Zx509X/Тестовое-задание-JF
+
+###Шрифт
+В проекте используется шрифт Montserrat [https://fonts.google.com/specimen/Montserrat](https://fonts.google.com/specimen/Montserrat)
+
+###Обязательно:
++1.SPA должно быть реализовано с использованием Vue,Vuex.
++2.Необходимо создать основные компоненты.
++3.Использовать actions, mutations. 
++3.Стили должны быть написаны с помощью препроцессора Scss
++4.Во время всех запросов нужно сигнализировать пользователю через прелоадер, что происходит запрос.
++5.Использовать изоляцию стилей.
+
+###Документация API
+[https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
+
+
+
+###Пример запроса пользователя по id:
+[https://jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)
+method: GET
