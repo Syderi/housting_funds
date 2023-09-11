@@ -29,7 +29,7 @@ export default {
     <h3>Результаты</h3>
     <ul :class="$style.usersWrapper">
       <li v-for="user in users" :key="user.id">
-        <UserPrevueCard :name="user.name" :email="user.email" />
+        <UserPrevueCard :name="user.name" :email="user.email" :id="user.id" />
       </li>
     </ul>
   </aside>
