@@ -21,6 +21,9 @@ export default {
       return this.$store.state.isLoadingUsers;
     },
     filteredUsers() {
+      if (!this.$store.state.users) {
+        return [];
+      }
       const query = this.searchQuery.toLowerCase();
 
       return this.users.filter((user) => {
