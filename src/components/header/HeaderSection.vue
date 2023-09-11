@@ -10,5 +10,5 @@
 </template>
 
 <style module>
-@import './header.module.scss';
+@import './headerSection.module.scss';
 </style>

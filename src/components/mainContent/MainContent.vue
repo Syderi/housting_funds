@@ -1,10 +1,10 @@
 <script setup>
-import Aside from './Aside.vue';
+import AsideSection from './AsideSection.vue';
 </script>
 
 <template>
   <main :class="$style.wrapper">
-    <Aside />
+    <AsideSection />
   </main>
 </template>
 

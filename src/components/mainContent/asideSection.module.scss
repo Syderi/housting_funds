@@ -21,8 +21,9 @@
     margin-top: 22px;
     border-radius: 8px;
     border: 1.5px solid $input-border;
-    background-color: white;
+    background-color: $white-color;
 
     @include text-font(1.4rem, 400, $gray-color);
   }
+
 }
